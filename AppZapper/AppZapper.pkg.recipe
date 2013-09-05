@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Downloads latest AppZapper and builds a package.</string>
     <key>Identifier</key>
-    <string>com.github.keeleysam.AppZapper.pkg</string>
+    <string>com.github.keeleysam.recipes.AppZapper.pkg</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>VLC</string>
+        <string>AppZapper</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>

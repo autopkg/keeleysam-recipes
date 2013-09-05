@@ -5,11 +5,11 @@
     <key>Description</key>
     <string>Downloads the latest AppZapper.</string>
     <key>Identifier</key>
-    <string>com.github.keeleysam.recipes.VLC.download</string>
+    <string>com.github.keeleysam.recipes.AppZapper.download</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>VLC</string>
+        <string>AppZapper</string>
         <key>SPARKLE_FEED_URL</key>
         <string>http://appzapper.com/az2appcast.xml</string>
     </dict>
@@ -63,5 +63,6 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
             </dict>
         </dict>
+    </array>
 </dict>
 </plist>

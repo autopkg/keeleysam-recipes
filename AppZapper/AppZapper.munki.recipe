@@ -7,7 +7,7 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.autopkg.recipes.AppZapper.munki</string>
+        <string>com.github.keeleysam.recipes.AppZapper.munki</string>
         <key>NAME</key>
         <string>AppZapper</string>
         <key>MUNKI_REPO_SUBDIR</key>
@@ -31,13 +31,9 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.VLC</string>
+    <string>com.github.keeleysam.recipes.AppZapper.download</string>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>MunkiPkginfoMerger</string>
-        </dict>
         <dict>
             <key>Arguments</key>
             <dict>
