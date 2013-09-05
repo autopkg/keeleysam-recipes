@@ -34,6 +34,10 @@
     <string>com.github.keeleysam.recipes.AppZapper.download</string>
     <key>Process</key>
     <array>
+    	<dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+        </dict>
         <dict>
             <key>Arguments</key>
             <dict>
