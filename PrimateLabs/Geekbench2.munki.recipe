@@ -7,7 +7,7 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.autopkg.munki.Geekbench2</string>
+        <string>com.github.keeleysam.recipes.primatelabs.Geekbench2.munki</string>
         <key>NAME</key>
         <string>Geekbench2</string>
         <key>MUNKI_REPO_SUBDIR</key>

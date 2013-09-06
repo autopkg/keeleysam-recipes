@@ -7,7 +7,7 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.autopkg.munki.Wiinote</string>
+        <string>com.github.keeleysam.recipes.primatelabs.Wiinote.munki</string>
         <key>NAME</key>
         <string>Wiinote</string>
         <key>MUNKI_REPO_SUBDIR</key>
