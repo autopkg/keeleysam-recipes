@@ -26,6 +26,25 @@
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
+            <key>installer_choices_xml</key>
+			<array>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>installer_choice_1</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>0</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>installer_choice_2</string>
+				</dict>
+			</array>
         </dict>
     </dict>
     <key>Process</key>
