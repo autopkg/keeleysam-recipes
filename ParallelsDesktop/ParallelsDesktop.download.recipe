@@ -17,7 +17,7 @@
             <key>Arguments</key>
             <dict>
                 <key>product_name</key>
-                <string>>%NAME%</string>
+                <string>%NAME%</string>
             </dict>
             <key>Processor</key>
             <string>ParallelsURLProvider</string>
