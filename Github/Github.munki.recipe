@@ -5,14 +5,12 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.autopkg.munki.Github</string>
+        <string>com.github.keeleysam.recipes.Github.munki</string>
         <key>NAME</key>
         <string>Github</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps</string>
-        <key>DOWNLOAD_URL</key>
-        <string>https://central.github.com/mac/latest</string>
-        <key>pkginfo</key>
+    	<key>pkginfo</key>
         <dict>
             <key>catalogs</key>
             <array>
@@ -28,25 +26,12 @@
             <true/>
         </dict>
     </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.1</string>
+    <key>ParentRecipe</key>
+    <string>com.github.keeleysam.recipes.Github.download</string>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
-                <key>filename</key>
-                <string>%NAME%.zip</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-            <key>Arguments</key>
-            <dict/>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>Unarchiver</string>
