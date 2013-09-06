@@ -7,11 +7,11 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.FileZilla</string>
+        <string>com.github.keeleysam.recipes.FileZilla.beta.munki</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps</string>
         <key>NAME</key>
-        <string>FileZilla</string>
+        <string>FileZilla_beta</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -26,25 +26,12 @@
             <true/>
         </dict>
     </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.keeleysam.recipes.FileZilla.download</string>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>product_name</key>
-                <string>FileZilla_release</string>
-            </dict>
-            <key>Processor</key>
-            <string>FileZillaURLProvider</string>
-        </dict>
-         <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>Unarchiver</string>

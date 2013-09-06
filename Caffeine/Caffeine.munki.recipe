@@ -5,15 +5,9 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.autopkg.munki.Caffeine</string>
-        <key>NAME</key>
-        <string>Caffeine</string>
+        <string>com.github.keeleysam.recipes.Caffeine.munki</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps</string>
-        <key>DOWNLOAD_URL</key>
-        <string>http://download.lightheadsw.com/download.php?software=caffeine</string>
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.46.3 (KHTML, like Gecko) Version/6.1 Safari/537.46.3</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -30,25 +24,12 @@
             <true/>
         </dict>
     </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.keeleysam.recipes.Caffeine.download</string>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
-                <key>filename</key>
-                <string>%NAME%.zip</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-            <key>Arguments</key>
-            <dict/>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>Unarchiver</string>
