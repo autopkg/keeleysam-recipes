@@ -10,7 +10,7 @@
     <dict>
         <key>NAME</key>
         <string>Caffeine</string>
-        <key>SPARKLE_FEED_URL</key>
+        <key>DOWNLOAD_URL</key>
         <string>http://download.lightheadsw.com/download.php?software=caffeine</string>
     </dict>
     <key>MinimumVersion</key>
@@ -19,16 +19,14 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>SparkleUpdateInfoProvider</string>
+            <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-                <key>appcast_url</key>
-                <string>%SPARKLE_FEED_URL%</string>
+                <key>url</key>
+                <string>%DOWNLOAD_URL%</string>
+                <key>filename</key>
+                <string>%NAME%.zip</string>
             </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
         </dict>
         <dict>
             <key>Processor</key>
