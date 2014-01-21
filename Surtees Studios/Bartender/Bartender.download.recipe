@@ -9,7 +9,7 @@
         <key>IDENTIFIER</key>
         <string>com.github.keeleysam.recipes.surteesstudios.Bartender.download</string>
         <key>NAME</key>
-        <string>Colloquy</string>
+        <string>Bartender</string>
         <key>SPARKLE_FEED_URL</key>
         <string>http://www.macbartender.com/updates/Appcast.xml</string>
     </dict>
