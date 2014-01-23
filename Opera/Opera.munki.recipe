@@ -9,7 +9,7 @@
         <key>NAME</key>
         <string>Opera</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/Opera</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
