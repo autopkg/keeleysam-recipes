@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Geekbench2</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/PrimateLabs/Geekbench2</string>
         <key>SPARKLE_FEED_URL</key>
         <string>http://www.primatelabs.com/appcast/geekbench2.xml</string>
         <key>pkginfo</key>

@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>InsomniaX</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/InsomniaX</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>

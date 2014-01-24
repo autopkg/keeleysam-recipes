@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>gfxCardStatus</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>utilities/gfxCardStatus</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>

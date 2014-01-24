@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>smcFanControl</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>utilities/smcFanControl</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>

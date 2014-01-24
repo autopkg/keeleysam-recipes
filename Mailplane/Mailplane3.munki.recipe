@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Mailplane3</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/Mailplane</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>

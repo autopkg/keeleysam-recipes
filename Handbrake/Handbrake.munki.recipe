@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Handbrake and imports into Munki.</string>
+    <string>Downloads the current release version of HandBrake and imports into Munki.</string>
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.autopkg.munki.Handbrake</string>
+        <string>com.github.keeleysam.autopkg.munki.HandBrake</string>
         <key>NAME</key>
-        <string>Handbrake</string>
+        <string>HandBrake</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/HandBrake</string>
         <key>SPARKLE_FEED_URL</key>
         <string>http://handbrake.fr/appcast.x86_64.xml</string>
         <key>pkginfo</key>
@@ -23,7 +23,7 @@
             <key>description</key>
             <string>HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.</string>
             <key>display_name</key>
-            <string>Handbrake</string>
+            <string>HandBrake</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
