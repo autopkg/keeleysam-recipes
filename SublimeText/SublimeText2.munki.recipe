@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>SublimeText2</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/SublimeText/SublimeText2</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>

@@ -9,7 +9,7 @@
         <key>NAME</key>
         <string>Quicksilver</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/Quicksilver</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
