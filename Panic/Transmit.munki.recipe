@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Transmit</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/Panic/Transmit</string>
         <key>SPARKLE_FEED_URL</key>
         <string>http://www.panic.com/updates/transmit/transmit-en.xml</string>
         <key>pkginfo</key>
