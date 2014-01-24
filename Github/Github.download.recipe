@@ -5,9 +5,9 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.Github.download</string>
+        <string>com.github.keeleysam.recipes.GitHub.download</string>
         <key>NAME</key>
-        <string>Github</string>
+        <string>GitHub</string>
         <key>DOWNLOAD_URL</key>
         <string>https://central.github.com/mac/latest</string>
     </dict>

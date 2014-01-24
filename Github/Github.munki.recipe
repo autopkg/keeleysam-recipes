@@ -5,11 +5,11 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.Github.munki</string>
+        <string>com.github.keeleysam.recipes.GitHub.munki</string>
         <key>NAME</key>
-        <string>Github</string>
+        <string>GitHub</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/GitHub</string>
     	<key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -17,9 +17,9 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>GUI application for Github.com</string>
+            <string>GUI application for GitHub.com</string>
             <key>display_name</key>
-            <string>Github</string>
+            <string>GitHub</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
@@ -29,7 +29,7 @@
     <key>MinimumVersion</key>
     <string>0.2.1</string>
     <key>ParentRecipe</key>
-    <string>com.github.keeleysam.recipes.Github.download</string>
+    <string>com.github.keeleysam.recipes.GitHub.download</string>
     <key>Process</key>
     <array>
         <dict>

@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>CarbonCopyCloner</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/Carbon Copy Cloner</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>

@@ -9,7 +9,7 @@
         <key>NAME</key>
         <string>StuffItExpander</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps</string>
+        <string>apps/StuffIt/StuffItExpander</string>
     	<key>pkginfo</key>
         <dict>
             <key>catalogs</key>
