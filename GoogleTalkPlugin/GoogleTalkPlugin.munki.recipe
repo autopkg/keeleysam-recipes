@@ -77,6 +77,17 @@
             <key>Processor</key>
             <string>MunkiImporter</string>
         </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoReceiptsEditor</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_ids_set_optional_true</key>
+                <array>
+                    <string>com.google.pkg.Keystone</string>
+                </array>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>
