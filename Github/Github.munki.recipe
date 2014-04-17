@@ -22,8 +22,29 @@
             <string>GitHub</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>postinstall_script</key>
+            <string>#!/bin/sh
+            CLI_SOURCE="/Applications/GitHub.app/Contents/MacOS/github_cli"
+            DEST_DIR="/usr/local/bin"
+            if [ ! -x "${CLI_SOURCE}" ]; then
+                exit 1
+            fi
+
+            if [ ! -d "${DEST_DIR}" ]; then
+                /bin/mkdir -p "${DEST_DIR}"
+            fi
+
+            /bin/ln -sf "${CLI_SOURCE}" "${DEST_DIR}/github"
+            </string>
             <key>unattended_install</key>
             <true/>
+            <key>uninstall_method</key>
+            <string>uninstall_script</string>
+            <key>uninstall_script</key>
+            <string>#!/bin/sh
+            /bin/rm -rf /Applications/GitHub.app
+            /bin/rm -f /usr/local/bin/github
+            </string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
