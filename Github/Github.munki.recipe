@@ -34,7 +34,7 @@ if [ ! -d "${DEST_DIR}" ]; then
     /bin/mkdir -p "${DEST_DIR}"
 fi
 
-/bin/ln -sf "${CLI_SOURCE}" "${DEST_DIR}/github"
+/bin/cp -f "${CLI_SOURCE}" "${DEST_DIR}/github"
 </string>
             <key>unattended_install</key>
             <true/>
