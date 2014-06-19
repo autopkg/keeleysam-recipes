@@ -10,7 +10,7 @@
         <string>GitHub</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/GitHub</string>
-    	<key>pkginfo</key>
+        <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
             <array>
