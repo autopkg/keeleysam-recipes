@@ -31,7 +31,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.keeleysam.download.Opera</string>
+    <string>com.github.keeleysam.recipes.Opera.download</string>
     <key>Process</key>
     <array>
         <dict>
