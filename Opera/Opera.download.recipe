@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest Opera disk image.</string>
     <key>Identifier</key>
-    <string>com.github.keeleysam.download.Opera</string>
+    <string>com.github.keeleysam.recipes.Opera.download</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
