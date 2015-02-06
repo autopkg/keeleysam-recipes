@@ -12,10 +12,6 @@
         <string>Zulip</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/Dropbox/Zulip</string>
-        <key>Developer</key>
-        <string>Dropbox</string>
-        <key>Category</key>
-        <string>Social Networking</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -26,6 +22,10 @@
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
+            <key>developer</key>
+            <string>Dropbox</string>
+            <key>category</key>
+            <string>Social Networking</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
