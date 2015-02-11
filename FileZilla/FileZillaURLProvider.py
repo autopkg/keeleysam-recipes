@@ -63,6 +63,9 @@ class FileZillaURLProvider(Processor):
 		except BaseException as e:
 			raise ProcessorError("Unexpected error retrieving product manifest: '%s'" % e)
 	
+		version = None
+		url = None
+
 		if prod == "FileZilla_beta":
 			for item in manifest_str.split("\n"):
  				if "beta" in item:
@@ -84,7 +87,9 @@ class FileZillaURLProvider(Processor):
  					line_split = item_strip.split()
  					url = line_split[2]
  					version = line_split[1]
-		
+
+		if not version or not url:
+			raise ProcessorError("Version or URL not found")
 		
 		self.env["version"] = version
 		self.env["url"] = url
