@@ -17,7 +17,7 @@
 import re
 import urllib2
 
-from autopkglib import Processor, ProcessorError
+from autopkglib import Processor
 
 
 __all__ = ["OperaURLProvider"]
@@ -43,19 +43,19 @@ class OperaURLProvider(Processor):
 
     def get_opera_url(self, url):
         try:
-        	page = urllib2.urlopen(url).read()
-        	links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
-        	url += max(links) + "mac/"
+            page = urllib2.urlopen(url).read()
+            links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
+            url += max(links) + "mac/"
 
-        	page = urllib2.urlopen(url).read()
-        	links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
-        	for link in links:
-        		if ".dmg" in link:
-        			url += link
-        	return url
+            page = urllib2.urlopen(url).read()
+            links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
+            for link in links:
+                if ".dmg" in link:
+                    url += link
+            return url
         except BaseException as err:
-        	raise Exception("Can't read %s: %s" % (base_url, err))
-        
+            raise Exception("Can't read %s: %s" % (url, err))
+
     def main(self):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
