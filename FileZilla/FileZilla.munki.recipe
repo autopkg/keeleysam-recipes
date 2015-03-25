@@ -18,6 +18,8 @@
             <array>
                 <string>testing</string>
             </array>
+            <key>description</key>
+            <string>FileZilla is a fast and reliable cross-platform FTP, FTPS and SFTP client.</string>
             <key>display_name</key>
             <string>FileZilla</string>
             <key>name</key>
