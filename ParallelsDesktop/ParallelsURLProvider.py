@@ -25,18 +25,20 @@ from autopkglib import Processor, ProcessorError
 
 __all__ = ["ParallelsURLProvider"]
 
-URLS = {"ParallelsDesktop6": "http://update.parallels.com/desktop/v6/en_us/parallels/parallels_updates.xml",
-		"ParallelsDesktop7": "http://update.parallels.com/desktop/v7/parallels/parallels_updates.xml",
-        "ParallelsDesktop8": "http://update.parallels.com/desktop/v8/parallels/parallels_updates.xml",
-        "ParallelsDesktop9": "http://update.parallels.com/desktop/v9/parallels/parallels_updates.xml"
+URLS = {
+	"ParallelsDesktop6": "http://update.parallels.com/desktop/v6/en_us/parallels/parallels_updates.xml",
+	"ParallelsDesktop7": "http://update.parallels.com/desktop/v7/parallels/parallels_updates.xml",
+    "ParallelsDesktop8": "http://update.parallels.com/desktop/v8/parallels/parallels_updates.xml",
+    "ParallelsDesktop9": "http://update.parallels.com/desktop/v9/parallels/parallels_updates.xml",
+    "ParallelsDesktop10": "http://update.parallels.com/desktop/v10/parallels/parallels_updates.xml"
         }
 
 class ParallelsURLProvider(Processor):
     description = "Provides a version, description, and DMG download for the Parallels product given."
     input_variables = {
         "product_name": {
-            "required": True,
-            "description": "Product to fetch URL for. One of 'ParallelsDesktop6', 'ParallelsDesktop7', 'ParallelsDesktop8', 'ParallelsDesktop9'.",
+        "required": True,
+        "description": "Product to fetch URL for. One of 'ParallelsDesktop6', 'ParallelsDesktop7', 'ParallelsDesktop8', 'ParallelsDesktop9', 'ParallelsDesktop10'.",
         },
     }
     output_variables = {
@@ -50,7 +52,6 @@ class ParallelsURLProvider(Processor):
             "description": "Update description."
         }
     }
-
     __doc__ = description
 
     def main(self):
@@ -81,7 +82,10 @@ class ParallelsURLProvider(Processor):
 				v_sub_minor     = parallels.getElementsByTagName('SubMinor')[0].firstChild.nodeValue
 				v_sub_sub_minor = parallels.getElementsByTagName('SubSubMinor')[0].firstChild.nodeValue
 				version = '.'.join([v_major, v_minor, v_sub_minor, v_sub_sub_minor])
-				update = parallels.getElementsByTagName('Update')[0]
+				if prod != "ParallelsDesktop10":
+					update = parallels.getElementsByTagName('Update')[0]
+				else:
+					update = parallels.getElementsByTagName('Update')[1]
 				if prod != "ParallelsDesktop6":
 					description = [x.firstChild.nodeValue for x in update.getElementsByTagName('UpdateDescription') if x.firstChild.nodeValue.startswith('en_US')][0]
 					description = '<html><body>%s</body></html>' % (description.split('#',1)[-1])
