@@ -33,7 +33,7 @@
     <key>MinimumVersion</key>
     <string>0.2.1</string>
     <key>ParentRecipe</key>
-    <string>com.github.keeleysam.recipes.SublimeText.SublimeText3.download</string>
+    <string>com.github.keeleysam.recipes.SublimeText.download.SublimeText3</string>
     <key>Process</key>
     <array>
         <dict>
