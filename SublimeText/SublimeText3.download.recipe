@@ -7,7 +7,7 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.SublimeText.SublimeText3.download</string>
+        <string>com.github.keeleysam.recipes.download.SublimeText.SublimeText3</string>
         <key>NAME</key>
         <string>SublimeText3</string>
         <key>SPARKLE_FEED_URL</key>
