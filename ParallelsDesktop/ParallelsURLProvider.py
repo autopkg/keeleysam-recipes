@@ -82,11 +82,14 @@ class ParallelsURLProvider(Processor):
 				v_sub_minor     = parallels.getElementsByTagName('SubMinor')[0].firstChild.nodeValue
 				v_sub_sub_minor = parallels.getElementsByTagName('SubSubMinor')[0].firstChild.nodeValue
 				version = '.'.join([v_major, v_minor, v_sub_minor, v_sub_sub_minor])
-				update = parallels.getElementsByTagName('Update')[0]
-				try:
+				if prod != "ParallelsDesktop10":
+					update = parallels.getElementsByTagName('Update')[0]
+				else:
+					update = parallels.getElementsByTagName('Update')[1]
+				if prod != "ParallelsDesktop6":
 					description = [x.firstChild.nodeValue for x in update.getElementsByTagName('UpdateDescription') if x.firstChild.nodeValue.startswith('en_US')][0]
 					description = '<html><body>%s</body></html>' % (description.split('#',1)[-1])
-				except:
+				else:
 					description = [x.firstChild.nodeValue for x in update.getElementsByTagName('UpdateDescription')][0]
 				url = update.getElementsByTagName('FilePath')[0].firstChild.nodeValue
 
