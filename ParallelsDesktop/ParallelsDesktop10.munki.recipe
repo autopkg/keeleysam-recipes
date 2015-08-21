@@ -26,6 +26,10 @@
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
+            <key>postinstall_script</key>
+            <string>#!/bin/bash
+chflags nohidden &quot;/Applications/%PATH%&quot;
+</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
