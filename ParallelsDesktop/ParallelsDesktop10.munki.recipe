@@ -43,6 +43,10 @@
                 <dict>
                     <key>description</key>
                     <string>%description%</string>
+                    <key>postinstall_script</key>
+                    <string>#!/bin/bash
+chflags nohidden &quot;/Applications/%PATH%&quot;
+</string>
                 </dict>
             </dict>
         </dict>
@@ -55,6 +59,19 @@
                 <string>%pathname%</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%pathname%/%PATH%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%PATH%</string>
+                <key>overwrite</key>
+                <true/>
             </dict>
         </dict>
         <dict>
