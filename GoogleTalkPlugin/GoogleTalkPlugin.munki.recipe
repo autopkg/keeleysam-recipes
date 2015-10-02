@@ -2,16 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Identifier</key>
+    <string>com.github.keeleysam.recipes.GoogleTalkPlugin</string>
+    <key>ParentRecipe</key>
+    <string>com.github.keeleysam.autopkg.download.GoogleTalkPlugin</string>
     <key>Input</key>
     <dict>
-        <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.GoogleTalkPlugin</string>
         <key>NAME</key>
         <string>GoogleTalkPlugin</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/Google/GoogleTalkPlugin</string>
-        <key>DOWNLOAD_URL</key>
-        <string>https://dl.google.com/googletalk/googletalkplugin/GoogleVoiceAndVideoSetup.dmg</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -49,23 +49,6 @@
     </dict>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-            <key>Arguments</key>
-            <dict/>
-        </dict>
         <dict>
             <key>Arguments</key>
             <dict>

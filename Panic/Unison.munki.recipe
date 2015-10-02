@@ -2,18 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Identifier</key>
+    <string>com.github.keeleysam.autopkg.munki.Unison</string>
+    <key>ParentRecipe</key>
+    <string>com.github.keeleysam.autopkg.download.Unison</string>
     <key>Description</key>
     <string>Downloads the current release version of Unison and imports into Munki.</string>
     <key>Input</key>
     <dict>
-        <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.autopkg.munki.Unison</string>
         <key>NAME</key>
         <string>Unison</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/Panic/Unison</string>
-        <key>SPARKLE_FEED_URL</key>
-        <string>http://www.panic.com/updates/unison/unison-en.xml</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -32,28 +32,6 @@
     </dict>
     <key>Process</key>
     <array>
-        <dict>
-            <key>Processor</key>
-            <string>SparkleUpdateInfoProvider</string>
-            <key>Arguments</key>
-            <dict>
-                <key>appcast_url</key>
-                <string>%SPARKLE_FEED_URL%</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>filename</key>
-                <string>%NAME%.zip</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
         <dict>
             <key>Processor</key>
             <string>Unarchiver</string>
