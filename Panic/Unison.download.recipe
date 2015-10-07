@@ -5,7 +5,7 @@
     <key>Identifier</key>
     <string>com.github.keeleysam.autopkg.download.Unison</string>
     <key>Description</key>
-    <string>Downloads the current release version of Unison and imports into Munki.</string>
+    <string>Downloads the current release version of Unison.</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
