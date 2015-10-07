@@ -5,7 +5,7 @@
     <key>Identifier</key>
     <string>com.github.keeleysam.autopkg.download.Geekbench2</string>
     <key>Description</key>
-    <string>Downloads the current release version of Geekbench 2 and imports into Munki.</string>
+    <string>Downloads the current release version of Geekbench 2.</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>

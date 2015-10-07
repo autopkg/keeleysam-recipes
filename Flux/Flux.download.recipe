@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Flux and imports into Munki.</string>
+    <string>Downloads the current release version of Flux.</string>
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
