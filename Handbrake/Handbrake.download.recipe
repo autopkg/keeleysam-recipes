@@ -2,19 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Identifier</key>
+    <string>com.github.keeleysam.autopkg.download.HandBrake</string>
     <key>Description</key>
-    <string>Downloads the current release version of Flux.</string>
+    <string>Downloads the current release version of HandBrake.</string>
     <key>Input</key>
     <dict>
-        <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.Flux.download</string>
         <key>NAME</key>
-        <string>Flux</string>
+        <string>HandBrake</string>
         <key>SPARKLE_FEED_URL</key>
-        <string>https://herf.org/flux/macflux.xml</string>
+        <string>http://handbrake.fr/appcast.x86_64.xml</string>
     </dict>
-    <key>MinimumVersion</key>
-    <string>0.2.0</string>
     <key>Process</key>
     <array>
         <dict>
@@ -32,7 +30,7 @@
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
-                <string>%NAME%.zip</string>
+                <string>%NAME%.dmg</string>
             </dict>
         </dict>
         <dict>
