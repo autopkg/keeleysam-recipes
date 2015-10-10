@@ -7,7 +7,7 @@
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.FileZilla.download</string>
+        <string>com.github.keeleysam.recipes.download.FileZilla</string>
     </dict>
     <key>Process</key>
     <array>
