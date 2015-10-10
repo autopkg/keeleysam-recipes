@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of gfxCardStatus and imports into Munki.</string>
+    <string>Downloads the current release version of gfxCardStatus.</string>
     <key>Input</key>
     <dict>
         <key>IDENTIFIER</key>
