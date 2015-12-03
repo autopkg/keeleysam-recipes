@@ -4,10 +4,12 @@
 <dict>
     <key>Description</key>
     <string>Downloads the current version of FileZilla. Specify the channel via %NAME%.</string>
+    <key>Identifier</key>
+    <string>com.github.keeleysam.recipes.FileZilla.download</string>
     <key>Input</key>
     <dict>
-        <key>IDENTIFIER</key>
-        <string>com.github.keeleysam.recipes.FileZilla.download</string>
+        <key>NAME</key>
+        <string>FileZilla</string>
     </dict>
     <key>Process</key>
     <array>
