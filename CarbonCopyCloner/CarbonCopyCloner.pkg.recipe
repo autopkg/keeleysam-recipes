@@ -11,29 +11,27 @@
 		<key>NAME</key>
 		<string>CarbonCopyCloner</string>
 	</dict>
-	<key>ParentRecipe</key>
-	<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
 	<key>MinimumVersion</key>
 	<string>0.3.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
 			<key>Arguments</key>
 			<dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>pkgdirs</key>
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
 				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
 			<key>Arguments</key>
 			<dict>
 				<key>archive_path</key>
@@ -43,12 +41,10 @@
 				<key>purge_destination</key>
 				<true/>
 			</dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
 		</dict>
 		<dict>
-			<key>Comment</key>
-			<string>Get version from the app</string>
-			<key>Processor</key>
-			<string>Versioner</string>
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
@@ -56,35 +52,39 @@
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
+			<key>Comment</key>
+			<string>Get version from the app</string>
+			<key>Processor</key>
+			<string>Versioner</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>PkgCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_request</key>
 				<dict>
-					<key>pkgname</key>
-					<string>%NAME%-%version%</string>
-					<key>version</key>
-					<string>%version%</string>
-					<key>id</key>
-					<string>com.bombich.ccc</string>
-					<key>options</key>
-					<string>purge_ds_store</string>
 					<key>chown</key>
 					<array>
 						<dict>
+							<key>group</key>
+							<string>admin</string>
 							<key>path</key>
 							<string>Applications</string>
 							<key>user</key>
 							<string>root</string>
-							<key>group</key>
-							<string>admin</string>
 						</dict>
 					</array>
+					<key>id</key>
+					<string>com.bombich.ccc</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>pkgname</key>
+					<string>%NAME%-%version%</string>
+					<key>version</key>
+					<string>%version%</string>
 				</dict>
 			</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
 		</dict>
 	</array>
 </dict>

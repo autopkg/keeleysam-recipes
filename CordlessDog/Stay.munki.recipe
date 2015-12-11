@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Coda 2 and imports into Munki.</string>
-	<key>Identifier</key>
-	<string>com.github.keeleysam.autopkg.munki.Coda2</string>
+	<string>Gets the current release version of Stay and imports into Munki.</string>
 	<key>Input</key>
 	<dict>
+		<key>IDENTIFIER</key>
+		<string>com.github.keeleysam.recipes.Stay.munki</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/Panic/Coda2</string>
+		<string>apps/Cordless Dog/Stay</string>
 		<key>NAME</key>
-		<string>Coda2</string>
+		<string>Stay</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,17 +19,19 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Web editor from Panic.</string>
+			<string>If you're fastidious about keeping your windows tidy, Stay is for you. Stay ensures that your windows are always where you want them to be, even as you connect and disconnect displays.</string>
 			<key>display_name</key>
-			<string>Coda 2</string>
+			<string>Stay</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.keeleysam.autopkg.download.Coda2</string>
+	<string>com.github.keeleysam.recipes.Stay.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
