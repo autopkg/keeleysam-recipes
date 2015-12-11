@@ -2,47 +2,47 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Identifier</key>
-    <string>com.github.keeleysam.autopkg.munki.HandBrake</string>
-    <key>ParentRecipe</key>
-    <string>com.github.keeleysam.autopkg.download.HandBrake</string>
-    <key>Description</key>
-    <string>Downloads the current release version of HandBrake and imports into Munki.</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>HandBrake</string>
-        <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/HandBrake</string>
-        <key>pkginfo</key>
-        <dict>
-            <key>catalogs</key>
-            <array>
-                <string>testing</string>
-            </array>
-            <key>description</key>
-            <string>HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.</string>
-            <key>display_name</key>
-            <string>HandBrake</string>
-            <key>name</key>
-            <string>%NAME%</string>
-            <key>unattended_install</key>
-            <true/>
-        </dict>
-    </dict>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%pathname%</string>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
-        </dict>
-    </array>
+	<key>Description</key>
+	<string>Downloads the current release version of HandBrake and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.autopkg.munki.HandBrake</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/HandBrake</string>
+		<key>NAME</key>
+		<string>HandBrake</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.</string>
+			<key>display_name</key>
+			<string>HandBrake</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.keeleysam.autopkg.download.HandBrake</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
 </dict>
 </plist>

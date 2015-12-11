@@ -3,16 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Wiinote.</string>
-	<key>Identifier</key>
-	<string>com.github.keeleysam.autopkg.download.Wiinote</string>
+	<string>Downloads the current release version of Stay.</string>
 	<key>Input</key>
 	<dict>
+		<key>IDENTIFIER</key>
+		<string>com.github.keeleysam.recipes.Stay.download</string>
 		<key>NAME</key>
-		<string>Wiinote</string>
+		<string>Stay</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://www.primatelabs.com/appcast/wiinote.xml</string>
+		<string>http://cordlessdog.com/stay/appcast.xml</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -25,11 +27,6 @@
 			<string>SparkleUpdateInfoProvider</string>
 		</dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%.zip</string>
-			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
