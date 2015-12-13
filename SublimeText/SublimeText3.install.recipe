@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads and installs the current release version of Sublime Text 3.</string>
+	<key>Input</key>
+	<dict>
+		<key>IDENTIFIER</key>
+		<string>com.github.keeleysam.recipes.SublimeText.SublimeText3.install</string>
+		<key>NAME</key>
+		<string>SublimeText3</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.5.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.keeleysam.recipes.SublimeText.SublimeText3.download</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>InstallFromDMG</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+				<key>items_to_copy</key>
+				<array>
+					<dict>
+						<key>source_item</key>
+						<string>Sublime Text.app</string>
+						<key>destination_path</key>
+						<string>/Applications/</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

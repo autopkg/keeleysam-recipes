@@ -14,7 +14,7 @@
 		<string>http://www.sublimetext.com/updates/3/stable/appcast_osx.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.1</string>
+	<string>0.5.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -38,6 +38,17 @@
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/Sublime Text.app</string>
+				<key>requirement</key>
+				<string>identifier "com.sublimetext.3" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Z6D26JE4Y4</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
