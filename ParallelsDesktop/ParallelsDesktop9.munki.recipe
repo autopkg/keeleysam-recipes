@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.ParallelsDesktop9.munki</string>
 	<key>Description</key>
 	<string>Downloads the current installation package for Parallels Desktop 9. Imports it into Munki.</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.ParallelsDesktop9.munki</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/Parallels/ParallelsDesktop9</string>
 		<key>NAME</key>

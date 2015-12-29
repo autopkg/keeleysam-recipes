@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.SublimeText.SublimeText2.download</string>
 	<key>Description</key>
 	<string>Downloads the current release version of Sublime Text 2.</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.SublimeText.SublimeText2.download</string>
 		<key>NAME</key>
 		<string>SublimeText2</string>
 		<key>SPARKLE_FEED_URL</key>

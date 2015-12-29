@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.gfxCardStatus.munki</string>
 	<key>Description</key>
 	<string>Downloads the current release version of gfxCardStatus and imports into Munki.</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.gfxCardStatus.munki</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>utilities/gfxCardStatus</string>
 		<key>NAME</key>
