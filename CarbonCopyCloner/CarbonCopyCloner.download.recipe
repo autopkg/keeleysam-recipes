@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Identifier</key>
-	<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
 	<key>Description</key>
 	<string>Downloads the current release version of Carbon Copy Cloner.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
