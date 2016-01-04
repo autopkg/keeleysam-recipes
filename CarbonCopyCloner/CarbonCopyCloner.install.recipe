@@ -7,7 +7,10 @@
 	<key>Identifier</key>
 	<string>com.github.keeleysam.recipes.CarbonCopyCloner.install</string>
 	<key>Input</key>
-	<dict/>
+	<dict>
+		<key>NAME</key>
+		<string>CarbonCopyCloner</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>

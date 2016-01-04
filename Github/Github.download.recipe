@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.GitHub.download</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
 		<string>https://central.github.com/mac/latest</string>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.GitHub.download</string>
 		<key>NAME</key>
 		<string>GitHub</string>
 	</dict>
