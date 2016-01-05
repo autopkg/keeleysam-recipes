@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the current release version of Mailplane3.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.Mailplane.3.download</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.Mailplane.3.download</string>
 		<key>NAME</key>
 		<string>Mailplane3</string>
 		<key>SPARKLE_FEED_URL</key>

@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the current release version of Xslimmer.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.Xslimmer.download</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.Xslimmer.download</string>
 		<key>NAME</key>
 		<string>Xslimmer</string>
 		<key>SPARKLE_FEED_URL</key>

@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the current release version of smcFanControl.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.smcFanControl.download</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.smcFanControl.download</string>
 		<key>NAME</key>
 		<string>smcFanControl</string>
 		<key>SPARKLE_FEED_URL</key>

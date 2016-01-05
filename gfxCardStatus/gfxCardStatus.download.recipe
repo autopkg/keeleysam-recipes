@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the current release version of gfxCardStatus.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.gfxCardStatus.download</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.gfxCardStatus.download</string>
 		<key>NAME</key>
 		<string>gfxCardStatus</string>
 		<key>SPARKLE_FEED_URL</key>

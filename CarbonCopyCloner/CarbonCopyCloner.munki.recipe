@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Imports CCC into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.CarbonCopyCloner.munki</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.CarbonCopyCloner.munki</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/Carbon Copy Cloner</string>
 		<key>NAME</key>

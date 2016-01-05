@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads and installs the current release version of Sublime Text 3.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.SublimeText.SublimeText3.install</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.SublimeText.SublimeText3.install</string>
 		<key>NAME</key>
 		<string>SublimeText3</string>
 	</dict>

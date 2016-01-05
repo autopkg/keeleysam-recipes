@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the current release version of Carbon Copy Cloner.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
 		<key>NAME</key>
 		<string>CarbonCopyCloner</string>
 		<key>SPARKLE_FEED_URL</key>

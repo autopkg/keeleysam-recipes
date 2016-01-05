@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the current release version of Sublime Text 2.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.SublimeText.SublimeText2.download</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.SublimeText.SublimeText2.download</string>
 		<key>NAME</key>
 		<string>SublimeText2</string>
 		<key>SPARKLE_FEED_URL</key>

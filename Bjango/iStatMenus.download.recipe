@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.Bjango.iStatMenus.download</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
 		<string>http://download.bjango.com/istatmenus/</string>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.Bjango.iStatMenus.download</string>
 		<key>NAME</key>
 		<string>Opera</string>
 		<key>USER_AGENT</key>

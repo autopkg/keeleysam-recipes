@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Gets the current release version of Stay and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.Stay.munki</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.Stay.munki</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/Cordless Dog/Stay</string>
 		<key>NAME</key>

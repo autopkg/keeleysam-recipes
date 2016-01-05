@@ -4,10 +4,10 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the current release version of Stay.</string>
+	<key>Identifier</key>
+	<string>com.github.keeleysam.recipes.Stay.download</string>
 	<key>Input</key>
 	<dict>
-		<key>IDENTIFIER</key>
-		<string>com.github.keeleysam.recipes.Stay.download</string>
 		<key>NAME</key>
 		<string>Stay</string>
 		<key>SPARKLE_FEED_URL</key>
