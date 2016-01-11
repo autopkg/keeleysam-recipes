@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Bartender</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://www.macbartender.com/updates/Appcast.xml</string>
+		<string>https://www.macbartender.com/updates/Appcast.xml</string>
 		<key>USER_AGENT</key>
 		<string>Mozilla/5.0</string>
 	</dict>
