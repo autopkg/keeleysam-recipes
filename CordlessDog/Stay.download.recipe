@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Stay</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://cordlessdog.com/stay/appcast.xml</string>
+		<string>https://cordlessdog.com/stay/appcast.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
