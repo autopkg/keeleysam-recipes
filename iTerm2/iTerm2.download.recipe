@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>iTerm2</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://iterm2.googlecode.com/svn/trunk/appcasts/final.xml</string>
+		<string>https://iterm2.googlecode.com/svn/trunk/appcasts/final.xml</string>
 	</dict>
 	<key>Process</key>
 	<array>

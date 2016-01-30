@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>SublimeText2</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://www.sublimetext.com/updates/2/stable/appcast_osx.xml</string>
+		<string>https://www.sublimetext.com/updates/2/stable/appcast_osx.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.1</string>
