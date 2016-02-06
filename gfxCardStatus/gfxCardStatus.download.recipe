@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>gfxCardStatus</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://gfx.io/appcast.xml</string>
+		<string>https://gfx.io/appcast.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.1</string>

@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>CarbonCopyCloner</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://www.bombich.com/software/updates/ccc-4.xml</string>
+		<string>https://www.bombich.com/software/updates/ccc-4.xml</string>
 		<key>USER_AGENT</key>
 		<string>Carbon Copy Cloner (Mac OS X) Sparkle/1.0</string>
 	</dict>
