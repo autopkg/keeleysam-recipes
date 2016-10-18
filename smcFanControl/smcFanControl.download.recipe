@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>smcFanControl</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://www.eidac.de/smcfancontrol/smcfancontrol.xml</string>
+		<string>https://www.eidac.de/smcfancontrol/smcfancontrol.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.1</string>

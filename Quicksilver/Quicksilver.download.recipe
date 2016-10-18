@@ -7,7 +7,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>http://qs0.qsapp.com/plugins/download.php</string>
+		<string>https://qs0.qsapp.com/plugins/download.php</string>
 		<key>NAME</key>
 		<string>Quicksilver</string>
 		<key>USER_AGENT</key>
