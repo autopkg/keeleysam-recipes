@@ -23,7 +23,7 @@ from autopkglib import Processor
 __all__ = ["OperaURLProvider"]
 
 
-BASE_URL = "http://get.geo.opera.com/ftp/pub/opera/desktop/"
+BASE_URL = "http://get.geo.opera.com/ftp/pub/opera/desktop/desktop/"
 
 
 class OperaURLProvider(Processor):
