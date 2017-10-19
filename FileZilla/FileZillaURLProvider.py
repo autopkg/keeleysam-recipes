@@ -22,7 +22,7 @@ from autopkglib import Processor, ProcessorError
 
 __all__ = ["FileZillaURLProvider"]
 
-update_url = "http://update.filezilla-project.org/updatecheck.php?platform=i686-apple-darwin9&version=3.0.0&osversion=12"
+update_url = "https://update.filezilla-project.org/updatecheck.php?platform=i686-apple-darwin9&version=3.0.0&osversion=12"
 
 prods = {"FileZilla": "release",
          "FileZilla_release": "release",
