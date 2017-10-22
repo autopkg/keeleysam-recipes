@@ -17,6 +17,8 @@
 
 import urllib2
 import re
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 from autopkglib import Processor, ProcessorError
 
