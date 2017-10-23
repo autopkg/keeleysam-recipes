@@ -11,9 +11,9 @@
 		<key>NAME</key>
 		<string>CarbonCopyCloner</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>https://www.bombich.com/software/updates/ccc-4.xml</string>
+		<string>https://bombich.com/software/updates/ccc.php?os_major=10&amp;os_minor=13&amp;os_bugfix=0&amp;ccc=5061&amp;beta=0&amp;locale=en</string>
 		<key>USER_AGENT</key>
-		<string>Carbon Copy Cloner (Mac OS X) Sparkle/1.0</string>
+		<string>Carbon%20Copy%20Cloner/5061 CFNetwork/887 Darwin/17.0.0 (x86_64)</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.3.1</string>
