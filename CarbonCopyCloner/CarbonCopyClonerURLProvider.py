@@ -39,7 +39,7 @@ class CarbonCopyClonerURLProvider(Processor):
     description = __doc__
 
     def get_ccc_url(self, url):
-        try:            
+        try:
             opener = urllib2.build_opener(urllib2.HTTPRedirectHandler)
             request = opener.open(url)
             return request.url
@@ -51,6 +51,7 @@ class CarbonCopyClonerURLProvider(Processor):
         base_url = self.env.get("base_url", BASE_URL)
         self.env["url"] = self.get_ccc_url(base_url)
         self.output("Found URL %s" % self.env["url"])
+
 
 if __name__ == "__main__":
     processor = CarbonCopyClonerURLProvider()

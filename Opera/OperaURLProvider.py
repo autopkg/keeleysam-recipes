@@ -62,6 +62,7 @@ class OperaURLProvider(Processor):
         self.env["url"] = self.get_opera_url(base_url)
         self.output("Found URL %s" % self.env["url"])
 
+
 if __name__ == "__main__":
     processor = OperaURLProvider()
     processor.execute_shell()
