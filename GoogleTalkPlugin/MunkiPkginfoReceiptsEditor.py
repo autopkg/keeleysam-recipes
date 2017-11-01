@@ -53,6 +53,7 @@ class MunkiPkginfoReceiptsEditor(Processor):
         else:
             self.output('No receipts modified, not writing pkginfo')
 
+
 if __name__ == '__main__':
     processor = MunkiPkginfoReceiptsEditor()
     processor.execute_shell()

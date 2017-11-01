@@ -101,6 +101,7 @@ class FileZillaURLProvider(Processor):
         self.env["url"] = url
         self.output("Found URL %s" % self.env["url"])
 
+
 if __name__ == "__main__":
     processor = FileZillaURLProvider()
     processor.execute_shell()
