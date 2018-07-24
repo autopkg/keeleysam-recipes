@@ -26,10 +26,10 @@ __all__ = ["FileZillaURLProvider"]
 
 update_url = "https://update.filezilla-project.org/updatecheck.php?platform=i686-apple-darwin9&version=3.0.0&osversion=12"
 
-prods = {"FileZilla": "release",
-         "FileZilla_release": "release",
-         "FileZilla_beta": "beta",
-         "FileZilla_nightly": "nightly"
+prods = {"filezilla": "release",
+         "filezilla_release": "release",
+         "filezilla_beta": "beta",
+         "filezilla_nightly": "nightly"
          }
 
 
@@ -55,7 +55,7 @@ class FileZillaURLProvider(Processor):
     def main(self):
 
         valid_prods = prods.keys()
-        prod = self.env.get("product_name")
+        prod = self.env.get("product_name").lower()
         if prod not in valid_prods:
             raise ProcessorError(
                 "product_name %s is invalid; it must be one of: %s" %
@@ -72,21 +72,21 @@ class FileZillaURLProvider(Processor):
         version = None
         url = None
 
-        if prod == "FileZilla_beta":
+        if prod == "filezilla_beta":
             for item in manifest_str.split("\n"):
                 if "beta" in item:
                     item_strip = item.strip()
                     line_split = item_strip.split()
                     url = line_split[2]
                     version = line_split[1]
-        elif prod == "FileZilla_nightly":
+        elif prod == "filezilla_nightly":
             for item in manifest_str.split("\n"):
                 if "nightly" in item:
                     item_strip = item.strip()
                     line_split = item_strip.split()
                     url = line_split[2]
                     version = line_split[1]
-        elif prod == "FileZilla" or prod == "FileZilla_release":
+        elif prod == "filezilla" or prod == "filezilla_release":
             for item in manifest_str.split("\n"):
                 if "release" in item:
                     item_strip = item.strip()
