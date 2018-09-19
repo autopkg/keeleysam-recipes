@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current installation package for FileZilla. Imports it into Munki.</string>
+	<string>Imports FileZilla into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.keeleysam.recipes.FileZilla.munki</string>
 	<key>Input</key>
 	<dict>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/FileZilla</string>
 		<key>NAME</key>
 		<string>FileZilla</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -20,8 +20,12 @@
 			</array>
 			<key>description</key>
 			<string>FileZilla is a fast and reliable cross-platform FTP, FTPS and SFTP client.</string>
+			<key>category</key>
+			<string>Networking</string>
+			<key>developer</key>
+			<string>%NAME%</string>
 			<key>display_name</key>
-			<string>FileZilla</string>
+			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -36,36 +40,12 @@
 	<array>
 		<dict>
 			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%dmg_path%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-			</dict>
+				<dict>
+					<key>pkg_path</key>
+					<string>%pathname%</string>
+					<key>repo_subdirectory</key>
+					<string>%MUNKI_REPO_SUBDIR%</string>
+				</dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
 		</dict>
