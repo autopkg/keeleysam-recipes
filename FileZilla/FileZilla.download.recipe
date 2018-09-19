@@ -3,75 +3,61 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current version of FileZilla. Specify the channel via %NAME%.</string>
+	<string>Downloads latest FileZilla</string>
 	<key>Identifier</key>
 	<string>com.github.keeleysam.recipes.FileZilla.download</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>FileZilla</string>
+		<key>SEARCH_URL</key>
+		<string>https://filezilla-project.org/download.php?type=client</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
-				<key>product_name</key>
-				<string>%NAME%</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>%USER_AGENT%</string>
+				</dict>
+				<key>url</key>
+				<string>%SEARCH_URL%</string>
+				<key>re_pattern</key>
+				<string>(?P&lt;downloadurl&gt;https:\/\/download\.filezilla-project\.org\/client\/FileZilla_(?P&lt;version&gt;.*?)_macosx-x86_setup_bundled\.dmg)</string>
 			</dict>
-			<key>Processor</key>
-			<string>FileZillaURLProvider</string>
 		</dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>CHECK_FILESIZE_ONLY</key>
-				<true/>
-				<key>filename</key>
-				<string>%NAME%.tar.bz2</string>
-			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-		</dict>
-		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<key>url</key>
+				<string>%downloadurl%</string>
 			</dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
-		<dict>
-                        <key>Arguments</key>
-                        <dict>
-                                <key>archive_path</key>
-                                <string>%pathname%</string>
-                                <key>destination_path</key>
-                                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-                                <key>purge_destination</key>
-                                <true/>
-                        </dict>
-                        <key>Processor</key>
-                        <string>Unarchiver</string>
-                </dict>
-		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-		</dict>
-		<dict>
+		<dict>   
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/FileZilla.app</string>
+				<string>%pathname%/FileZilla.app</string>
 				<key>requirement</key>
-				<string>identifier "org.filezilla-project.filezilla" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5VPGKXL75N"</string>
+				<string>identifier "com.papalism.Annellata" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5VPGKXL75N"
+				</string>
 			</dict>
 		</dict>
 	</array>
