@@ -29,6 +29,11 @@
 				<true/>
 				<key>filename</key>
 				<string>%NAME%.tar.bz2</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>FileZilla 3.25.1</string>
+				</dict>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
