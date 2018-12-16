@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>com.keeleysam.recipes.pkg.DuoDeviceHealth</string>
+	<key>Input</key>
+	<dict>
+		<key>BUNDLE_ID</key>
+		<string>com.duosecurity.duo-device-health</string>
+		<key>NAME</key>
+		<string>Duo Device Health</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.keeleysam.recipes.download.DuoDeviceHealth</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
