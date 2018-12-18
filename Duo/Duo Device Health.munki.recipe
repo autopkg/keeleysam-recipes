@@ -14,7 +14,7 @@
 		<dict>
 			<key>catalogs</key>
 			<array>
-				<string>producttion</string>
+				<string>production</string>
 			</array>
 			<key>developer</key>
 			<string>Duo Security, Inc.</string>
