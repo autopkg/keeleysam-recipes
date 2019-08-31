@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import absolute_import
 from FoundationPlist import readPlist, writePlist
 from autopkglib import Processor, ProcessorError
 
