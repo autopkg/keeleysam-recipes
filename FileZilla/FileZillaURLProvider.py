@@ -63,7 +63,7 @@ class FileZillaURLProvider(Processor):
 
         try:
             manifest_str = urllib2.urlopen(update_url).read()
-            # print manifest_str
+            # print(manifest_str)
         except BaseException as e:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" %
