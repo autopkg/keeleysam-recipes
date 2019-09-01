@@ -16,10 +16,13 @@
 
 from __future__ import absolute_import
 import re
-import urllib2
 
 from autopkglib import Processor
 
+try:
+    from urllib.request import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["OperaURLProvider"]
 
@@ -44,11 +47,11 @@ class OperaURLProvider(Processor):
 
     def get_opera_url(self, url):
         try:
-            page = urllib2.urlopen(url).read()
+            page = urlopen(url).read()
             links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
             url += max(links) + "mac/"
 
-            page = urllib2.urlopen(url).read()
+            page = urlopen(url).read()
             links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
             for link in links:
                 if ".dmg" in link:

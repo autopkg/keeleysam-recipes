@@ -17,12 +17,16 @@
 # limitations under the License.
 
 from __future__ import absolute_import
-import urllib2
 import xml.dom.minidom
 from distutils.version import LooseVersion
 from operator import itemgetter
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.request import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["ParallelsURLProvider"]
 
@@ -67,7 +71,7 @@ class ParallelsURLProvider(Processor):
                 (prod, ', '.join(URLS)))
         url = URLS[prod]
         try:
-            manifest_str = urllib2.urlopen(url).read()
+            manifest_str = urlopen(url).read()
         except BaseException as e:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" %

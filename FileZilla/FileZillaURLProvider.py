@@ -16,12 +16,15 @@
 # limitations under the License.
 
 from __future__ import absolute_import
-import urllib2
-import re
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.request import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["FileZillaURLProvider"]
 
@@ -62,7 +65,7 @@ class FileZillaURLProvider(Processor):
                 (prod, ', '.join(prods)))
 
         try:
-            manifest_str = urllib2.urlopen(update_url).read()
+            manifest_str = urlopen(update_url).read()
             # print(manifest_str)
         except BaseException as e:
             raise ProcessorError(
