@@ -39,7 +39,7 @@ class ParallelsURLProvider(Processor):
     input_variables = {
         "product_name": {
             "required": True,
-            "description": "Product to fetch URL for. One of 'ParallelsDesktop6', 'ParallelsDesktop7', 'ParallelsDesktop8', 'ParallelsDesktop9', 'ParallelsDesktop10'.",
+            "description": "Product to fetch URL for. One of: %s." % ', '.join(URLS),
         },
     }
     output_variables = {
@@ -60,12 +60,11 @@ class ParallelsURLProvider(Processor):
         def compare_version(a, b):
             return cmp(LooseVersion(a), LooseVersion(b))
 
-        valid_prods = URLS.keys()
         prod = self.env.get("product_name")
-        if prod not in valid_prods:
+        if prod not in URLS:
             raise ProcessorError(
                 "product_name %s is invalid; it must be one of: %s" %
-                (prod, valid_prods))
+                (prod, ', '.join(URLS)))
         url = URLS[prod]
         try:
             manifest_str = urllib2.urlopen(url).read()

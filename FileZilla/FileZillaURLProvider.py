@@ -39,7 +39,7 @@ class FileZillaURLProvider(Processor):
     input_variables = {
         "product_name": {
             "required": True,
-            "description": "Product to fetch URL for. One of 'FileZilla', 'FileZilla_release', 'FileZilla_beta', 'FileZilla_nightly'.",
+            "description": "Product to fetch URL for. One of: %s" % ', '.join(prods),
         },
     }
     output_variables = {
@@ -55,12 +55,11 @@ class FileZillaURLProvider(Processor):
 
     def main(self):
 
-        valid_prods = prods.keys()
         prod = self.env.get("product_name").lower()
-        if prod not in valid_prods:
+        if prod not in prods:
             raise ProcessorError(
                 "product_name %s is invalid; it must be one of: %s" %
-                (prod, valid_prods))
+                (prod, ', '.join(prods)))
 
         try:
             manifest_str = urllib2.urlopen(update_url).read()
