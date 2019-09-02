@@ -16,10 +16,13 @@
 # limitations under the License.
 
 from __future__ import absolute_import
+
 import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
 
 from autopkglib import Processor, ProcessorError
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
 
 try:
     from urllib.request import urlopen  # For Python 3

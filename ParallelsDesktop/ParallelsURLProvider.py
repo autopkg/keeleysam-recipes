@@ -17,9 +17,9 @@
 # limitations under the License.
 
 from __future__ import absolute_import
+
 import xml.dom.minidom
 from distutils.version import LooseVersion
-from operator import itemgetter
 
 from autopkglib import Processor, ProcessorError
 
