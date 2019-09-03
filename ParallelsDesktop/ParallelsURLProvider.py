@@ -72,7 +72,7 @@ class ParallelsURLProvider(Processor):
         url = URLS[prod]
         try:
             manifest_str = urlopen(url).read()
-        except BaseException as e:
+        except Exception as e:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" %
                 e)

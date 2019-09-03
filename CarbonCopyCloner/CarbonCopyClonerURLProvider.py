@@ -44,7 +44,7 @@ class CarbonCopyClonerURLProvider(Processor):
             opener = urllib2.build_opener(urllib2.HTTPRedirectHandler)
             request = opener.open(url)
             return request.url
-        except BaseException as err:
+        except Exception as err:
             raise Exception("Can't read %s: %s" % (url, err))
 
     def main(self):

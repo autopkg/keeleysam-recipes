@@ -58,7 +58,7 @@ class OperaURLProvider(Processor):
                 if ".dmg" in link:
                     url += link
             return url
-        except BaseException as err:
+        except Exception as err:
             raise Exception("Can't read %s: %s" % (url, err))
 
     def main(self):

@@ -70,7 +70,7 @@ class FileZillaURLProvider(Processor):
         try:
             manifest_str = urlopen(update_url).read()
             # print(manifest_str)
-        except BaseException as e:
+        except Exception as e:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" %
                 e)
