@@ -24,11 +24,6 @@
 			<dict>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
-				<key>request_headers</key>
-				<dict>
-					<key>user-agent</key>
-					<string>%USER_AGENT%</string>
-				</dict>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
