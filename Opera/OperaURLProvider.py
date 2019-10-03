@@ -45,10 +45,19 @@ class OperaURLProvider(Processor):
         try:
             page = urllib2.urlopen(url).read()
             links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
+                   
+            while True:
+                req = url + max(links) + "mac/"
+                try:
+                    urllib2.urlopen(req)
+                    break
+                except urllib2.URLError, e:
+                    links.pop()
+
             url += max(links) + "mac/"
 
             page = urllib2.urlopen(url).read()
-            links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
+            links = re.findall("<a.*?\s*href=\"(.*?.dmg)\".*?>", page)
             for link in links:
                 if ".dmg" in link:
                     url += link
