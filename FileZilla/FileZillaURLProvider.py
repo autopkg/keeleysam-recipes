@@ -15,12 +15,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import urllib2
-import re
+from __future__ import absolute_import
+
 import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
 
 from autopkglib import Processor, ProcessorError
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+
+try:
+    from urllib.request import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["FileZillaURLProvider"]
 
@@ -38,7 +45,7 @@ class FileZillaURLProvider(Processor):
     input_variables = {
         "product_name": {
             "required": True,
-            "description": "Product to fetch URL for. One of 'FileZilla', 'FileZilla_release', 'FileZilla_beta', 'FileZilla_nightly'.",
+            "description": "Product to fetch URL for. One of: %s" % ', '.join(prods),
         },
     }
     output_variables = {
@@ -54,17 +61,16 @@ class FileZillaURLProvider(Processor):
 
     def main(self):
 
-        valid_prods = prods.keys()
         prod = self.env.get("product_name").lower()
-        if prod not in valid_prods:
+        if prod not in prods:
             raise ProcessorError(
                 "product_name %s is invalid; it must be one of: %s" %
-                (prod, valid_prods))
+                (prod, ', '.join(prods)))
 
         try:
-            manifest_str = urllib2.urlopen(update_url).read()
-            # print manifest_str
-        except BaseException as e:
+            manifest_str = urlopen(update_url).read()
+            # print(manifest_str)
+        except Exception as e:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" %
                 e)

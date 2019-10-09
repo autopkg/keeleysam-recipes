@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
-from FoundationPlist import readPlist, writePlist
+from __future__ import absolute_import
+
 from autopkglib import Processor, ProcessorError
+from FoundationPlist import readPlist, writePlist
 
 __all__ = ["MunkiPkginfoReceiptsEditor"]
 

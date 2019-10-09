@@ -14,11 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import absolute_import
+
 import re
-import urllib2
 
 from autopkglib import Processor
 
+try:
+    from urllib.request import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["OperaURLProvider"]
 
@@ -62,7 +67,7 @@ class OperaURLProvider(Processor):
                 if ".dmg" in link:
                     url += link
             return url
-        except BaseException as err:
+        except Exception as err:
             raise Exception("Can't read %s: %s" % (url, err))
 
     def main(self):
