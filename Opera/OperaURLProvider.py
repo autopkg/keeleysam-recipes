@@ -48,12 +48,21 @@ class OperaURLProvider(Processor):
 
     def get_opera_url(self, url):
         try:
-            page = urlopen(url).read()
-            links = re.findall(r"<a.*?\s*href=\"(.*?)\".*?>", page)
+            page = urllib2.urlopen(url).read()
+            links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
+                   
+            while True:
+                req = url + max(links) + "mac/"
+                try:
+                    urllib2.urlopen(req)
+                    break
+                except urllib2.URLError, e:
+                    links.pop()
+
             url += max(links) + "mac/"
 
-            page = urlopen(url).read()
-            links = re.findall(r"<a.*?\s*href=\"(.*?)\".*?>", page)
+            page = urllib2.urlopen(url).read()
+            links = re.findall("<a.*?\s*href=\"(.*?.dmg)\".*?>", page)
             for link in links:
                 if ".dmg" in link:
                     url += link
