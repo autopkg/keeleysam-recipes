@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of StarTechUSBDriver.</string>
 	<key>Identifier</key>
-	<string>com.github.bdemetris-recipes.download.StarTechUSBDriver</string>
+	<string>com.github.keeleysam-recipes.download.StarTechUSBDriver</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
