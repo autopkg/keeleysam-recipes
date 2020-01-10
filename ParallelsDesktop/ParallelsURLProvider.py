@@ -21,12 +21,7 @@ from __future__ import absolute_import
 import xml.dom.minidom
 from distutils.version import LooseVersion
 
-from autopkglib import Processor, ProcessorError
-
-try:
-    from urllib.request import urlopen  # For Python 3
-except ImportError:
-    from urllib2 import urlopen  # For Python 2
+from autopkglib import Processor, ProcessorError, URLGetter
 
 __all__ = ["ParallelsURLProvider"]
 
@@ -38,7 +33,7 @@ URLS = {
     "ParallelsDesktop10": "http://update.parallels.com/desktop/v10/parallels/parallels_updates.xml"}
 
 
-class ParallelsURLProvider(Processor):
+class ParallelsURLProvider(URLGetter):
     description = "Provides a version, description, and DMG download for the Parallels product given."
     input_variables = {
         "product_name": {
@@ -71,7 +66,7 @@ class ParallelsURLProvider(Processor):
                 (prod, ', '.join(URLS)))
         url = URLS[prod]
         try:
-            manifest_str = urlopen(url).read()
+            manifest_str = self.download(url)
         except Exception as e:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" %
