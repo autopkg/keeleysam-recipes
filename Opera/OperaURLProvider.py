@@ -18,12 +18,7 @@ from __future__ import absolute_import
 
 import re
 
-from autopkglib import Processor
-
-try:
-    from urllib.request import urlopen  # For Python 3
-except ImportError:
-    from urllib2 import urlopen  # For Python 2
+from autopkglib import Processor, ProcessorError, URLGetter
 
 __all__ = ["OperaURLProvider"]
 
@@ -31,49 +26,50 @@ __all__ = ["OperaURLProvider"]
 BASE_URL = "http://get.geo.opera.com/ftp/pub/opera/desktop/"
 
 
-class OperaURLProvider(Processor):
+class OperaURLProvider(URLGetter):
     """Provides a download URL for the latest Opera release."""
+
     input_variables = {
-        "base_url": {
-            "required": False,
-            "description": "Default is %s" % BASE_URL,
-        },
+        "base_url": {"required": False, "description": "Default is %s" % BASE_URL,},
     }
     output_variables = {
-        "url": {
-            "description": "URL to the latest Opera release.",
-        },
+        "url": {"description": "URL to the latest Opera release.",},
+        "version": {"description": "Version of the latest Opera release.",},
     }
     description = __doc__
 
     def get_opera_url(self, url):
-        try:
-            page = urllib2.urlopen(url).read()
-            links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
-                   
-            while True:
-                req = url + max(links) + "mac/"
-                try:
-                    urllib2.urlopen(req)
-                    break
-                except urllib2.URLError, e:
-                    links.pop()
+        version = None
 
-            url += max(links) + "mac/"
+        # Get list of links from directory listing
+        page = self.download(url)
+        links = re.findall(r'<a.*?\s*href="(.*?)".*?>', page)
 
-            page = urllib2.urlopen(url).read()
-            links = re.findall("<a.*?\s*href=\"(.*?.dmg)\".*?>", page)
-            for link in links:
-                if ".dmg" in link:
-                    url += link
-            return url
-        except Exception as err:
-            raise Exception("Can't read %s: %s" % (url, err))
+        # Evaluate the links in reverse alphabetical order
+        while True:
+            curl_cmd = self.prepare_curl_cmd()
+            curl_cmd.extend(["--head", url + max(links) + "mac/"])
+            output = self.download_with_curl(curl_cmd)
+            if "200 OK" in output:
+                version = max(links).rstrip("/")
+                break
+            links.remove(max(links))
+            if not links:
+                raise ProcessorError("Did not find any valid versions to download.")
+
+        # Obtain and return the dmg download URL and version
+        url += max(links) + "mac/"
+        page = self.download(url)
+        links = re.findall(r'<a.*?\s*href="(.*?.dmg)".*?>', page)
+        for link in links:
+            if ".dmg" in link:
+                url += link
+        return url, version
 
     def main(self):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
-        self.env["url"] = self.get_opera_url(base_url)
+        self.env["url"], self.env["version"] = self.get_opera_url(base_url)
         self.output("Found URL %s" % self.env["url"])
 
 
