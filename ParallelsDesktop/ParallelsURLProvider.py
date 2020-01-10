@@ -56,9 +56,6 @@ class ParallelsURLProvider(URLGetter):
 
     def main(self):
 
-        def compare_version(a, b):
-            return cmp(LooseVersion(a), LooseVersion(b))
-
         prod = self.env.get("product_name")
         if prod not in URLS:
             raise ProcessorError(
