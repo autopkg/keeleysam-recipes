@@ -16,14 +16,12 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>CarbonCopyClonerURLProvider</string>
-		</dict>
-		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%.zip</string>
+				<key>url</key>
+				<string>https://bombich.com/software/download_ccc.php?v=latest</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
