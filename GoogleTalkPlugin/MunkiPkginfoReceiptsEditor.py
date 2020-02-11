@@ -3,7 +3,7 @@
 from __future__ import absolute_import
 
 from autopkglib import Processor, ProcessorError
-from FoundationPlist import readPlist, writePlist
+from plistlib import readPlist, writePlist
 
 __all__ = ["MunkiPkginfoReceiptsEditor"]
 
