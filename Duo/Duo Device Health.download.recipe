@@ -9,7 +9,7 @@
 		<key>NAME</key>
 		<string>Duo Device Health</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>https://dl.duosecurity.com/DuoDeviceHealth-appcast-macos-latest.xml</string>
+		<string>https://dl.duosecurity.com/DuoDeviceHealth-appcast-v2-macos-latest.xml</string>
 	</dict>
 	<key>Process</key>
 	<array>
