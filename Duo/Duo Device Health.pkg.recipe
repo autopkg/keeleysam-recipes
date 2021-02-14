@@ -6,8 +6,6 @@
 	<string>com.keeleysam.recipes.pkg.DuoDeviceHealth</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.duosecurity.duo-device-health</string>
 		<key>NAME</key>
 		<string>Duo Device Health</string>
 	</dict>
