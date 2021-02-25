@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Mailplane3</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://update.mailplaneapp.com/appcast.php?appName=Mailplane%203</string>
+		<string>https://update.mailplaneapp.com/appcast.php?appName=Mailplane%203</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.1</string>
