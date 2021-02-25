@@ -42,7 +42,7 @@ class OperaURLProvider(URLGetter):
         version = None
 
         # Get list of links from directory listing
-        page = self.download(url)
+        page = self.download(url).decode('utf-8')
         links = re.findall(r'<a.*?\s*href="(.*?)".*?>', page)
 
         # Evaluate the links in reverse alphabetical order
@@ -59,7 +59,7 @@ class OperaURLProvider(URLGetter):
 
         # Obtain and return the dmg download URL and version
         url += max(links) + "mac/"
-        page = self.download(url)
+        page = self.download(url).decode('utf-8')
         links = re.findall(r'<a.*?\s*href="(.*?.dmg)".*?>', page)
         for link in links:
             if ".dmg" in link:
