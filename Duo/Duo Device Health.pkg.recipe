@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Identifier</key>
-	<string>com.keeleysam.recipes.pkg.DuoDeviceHealth</string>
-	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>Duo Device Health</string>
-	</dict>
-	<key>ParentRecipe</key>
-	<string>com.keeleysam.recipes.download.DuoDeviceHealth</string>
-	<key>Process</key>
-	<array>
+		<key>Identifier</key>
+		<string>com.keeleysam.recipes.pkg.DuoDeviceHealth</string>
+		<key>Input</key>
 		<dict>
-			<key>Processor</key>
-			<string>AppPkgCreator</string>
+			<key>NAME</key>
+			<string>Duo Device Health</string>
 		</dict>
-	</array>
-</dict>
+		<key>ParentRecipe</key>
+		<string>com.keeleysam.recipes.download.DuoDeviceHealth</string>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>PkgCopier</string>
+				<key>Arguments</key>
+				<dict>
+					<key>source_pkg</key>
+					<string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.dmg/Install-DuoDeviceHealth.pkg</string>
+					<key>pkg_path</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
 </plist>
