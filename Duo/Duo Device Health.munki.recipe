@@ -28,7 +28,7 @@
 # If running macOS 11+ then write out this file to allow installation to proceed.
 # Needs MDM to deliver a cert profile, as per: https://duo.com/docs/device-health
 #
-# Get darwin version, pinched, with <3 from: https://stackoverflow.com/a/39499208
+# Get darwin version, pinched, with &lt;33 from: https://stackoverflow.com/a/39499208
 # Arguably a cleaner way to detect OS.
 
 if [[ ${OSTYPE:6} -ge 21 ]]
