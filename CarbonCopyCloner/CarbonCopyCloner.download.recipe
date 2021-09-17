@@ -8,7 +8,7 @@
 The VERSION key can be overridden with (at the time of writing), three values:
  - latest (which is the v6 latest)
  - latestbeta (latest v6 beta)
- - 5 (the last release of v5)
+ - ccc5 (the last release of v5)
 </string>
     <key>Identifier</key>
     <string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
