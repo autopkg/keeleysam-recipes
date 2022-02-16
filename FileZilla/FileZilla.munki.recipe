@@ -27,8 +27,6 @@
 			<key>unattended_install</key>
 			<true/>
 		</dict>
-		<key>RE_PATTERN</key>
-		<string>&lt;a href=\"(?P&lt;url&gt;http[s]?.*?(?P&lt;filename&gt;FileZilla_(?P&lt;version&gt;[\d.]+)_macosx.*?\.app\.tar\.bz2).*?)\"</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
