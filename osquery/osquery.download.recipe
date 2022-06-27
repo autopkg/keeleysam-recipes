@@ -2,27 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Osquery from GitHub.</string>
 	<key>Identifier</key>
 	<string>com.github.keeleysam.recipes.osquery.download</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://osquery-packages.s3.amazonaws.com/darwin/osquery.pkg</string>
 		<key>NAME</key>
 		<string>osquery</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.4.1</string>
+	<string>0.5.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.pkg</string>
-				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<key>github_repo</key>
+				<string>osquery/osquery</string>
 			</dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
@@ -37,7 +39,7 @@
 			<dict>
 				<key>expected_authority_names</key>
 				<array>
-					<string>Developer ID Installer: Theodore Reed (B89LNTUADM)</string>
+					<string>Developer ID Installer: OSQUERY A Series of LF Projects, LLC (3522FA9PXF)</string>
 					<string>Developer ID Certification Authority</string>
 					<string>Apple Root CA</string>
 				</array>
