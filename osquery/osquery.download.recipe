@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>osquery</string>
+		<key>REPO</key>
+		<string>osquery/osquery</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
@@ -19,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>github_repo</key>
-				<string>osquery/osquery</string>
+				<string>%REPO%</string>
 			</dict>
 			<key>Processor</key>
 			<string>GitHubReleasesInfoProvider</string>
