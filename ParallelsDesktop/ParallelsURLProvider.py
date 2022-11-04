@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/autopkg/python
 #
 # ParallelsURLProvider, version 2013.08.08
 # Copyright 2013 Samuel Keeley, derived from BarebonesURLProvider by Timothy Sutton
