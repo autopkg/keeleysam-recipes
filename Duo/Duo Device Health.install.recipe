@@ -14,22 +14,13 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>Installer</string>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
+				<key>pkg_path</key>
 				<string>%pathname%</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>/Applications</string>
-						<key>source_item</key>
-						<string>Duo Device Health.app</string>
-					</dict>
-				</array>
 			</dict>
-			<key>Processor</key>
-			<string>InstallFromDMG</string>
 		</dict>
 	</array>
 </dict>
