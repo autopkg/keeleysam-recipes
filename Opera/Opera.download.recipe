@@ -38,7 +38,7 @@
 				<key>input_path</key>
 				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/Opera.app</string>
 				<key>requirement</key>
-				<string>(identifier "com.operasoftware.Opera" or identifier "com.operasoftware.OperaNext" or identifier "com.operasoftware.OperaDeveloper" or identifier "com.operasoftware.OperaNightly") and (certificate leaf = H"cdf1c39967986616b6cd64c6bd04833a9cb7450d" or certificate leaf = H"261cd515406974afa19778f62e5d916ec977ebf4")</string>
+				<string>(identifier "com.operasoftware.Opera" or identifier "com.operasoftware.OperaNext" or identifier "com.operasoftware.OperaDeveloper" or identifier "com.operasoftware.OperaNightly" or identifier "com.operasoftware.OperaGX" or identifier "com.operasoftware.OperaGXNext" or identifier "com.operasoftware.OperaGXDeveloper" or identifier "com.operasoftware.OperaGXNightly" or identifier "com.operasoftware.OperaCrypto" or identifier "com.operasoftware.OperaCryptoNext" or identifier "com.operasoftware.OperaCryptoDeveloper" or identifier "com.operasoftware.OperaCryptoNightly") and (certificate leaf = H"cdf1c39967986616b6cd64c6bd04833a9cb7450d" or certificate leaf = H"89584386993936e6f38e64eed006f705f2570cbf")</string>
 			</dict>
 		</dict>
 		<dict>
