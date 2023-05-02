@@ -33,7 +33,7 @@ The VERSION key can be overridden with (at the time of writing), three values:
                 <key>url</key>
                 <string>%DOWNLOAD_URL%</string>
                 <key>re_pattern</key>
-                <string>(/software/download_ccc\.php\?v=%VERSION%.*)\"</string>
+                <string>(/software/download_ccc\.php\?v=%VERSION%)\"</string>
                 <key>result_output_var_name</key>
                 <string>match</string>
             </dict>
