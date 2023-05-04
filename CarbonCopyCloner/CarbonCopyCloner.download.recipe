@@ -16,8 +16,6 @@ The VERSION key can be overridden with (at the time of writing), three values:
     <dict>
         <key>NAME</key>
         <string>CarbonCopyCloner</string>
-        <key>DOWNLOAD_URL</key>
-        <string>https://bombich.scdn1.secure.raxcdn.com/download</string>
         <key>VERSION</key>
         <string>latest</string>
     </dict>
@@ -27,26 +25,13 @@ The VERSION key can be overridden with (at the time of writing), three values:
     <array>
         <dict>
             <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
-                <key>re_pattern</key>
-                <string>(/software/download_ccc\.php\?v=%VERSION%.*)\"</string>
-                <key>result_output_var_name</key>
-                <string>match</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>filename</key>
                 <string>%NAME%.zip</string>
                 <key>url</key>
-                <string>https://bombich.scdn1.secure.raxcdn.com%match%</string>
+                <string>https://bombich.scdn1.secure.raxcdn.com/software/download_ccc.php?v=%VERSION%</string>
             </dict>
         </dict>
         <dict>
