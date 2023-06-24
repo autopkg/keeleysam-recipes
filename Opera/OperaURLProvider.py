@@ -18,7 +18,7 @@ from __future__ import absolute_import
 
 import re
 
-from autopkglib import Processor, ProcessorError, URLGetter
+from autopkglib import Processor, ProcessorError, URLGetter, APLooseVersion
 
 __all__ = ["OperaURLProvider"]
 
@@ -44,27 +44,23 @@ class OperaURLProvider(URLGetter):
         # Get list of links from directory listing
         page = self.download(url).decode('utf-8')
         links = re.findall(r'<a.*?\s*href="(.*?)".*?>', page)
-
-        # Evaluate the links in reverse alphabetical order
-        while True:
-            curl_cmd = self.prepare_curl_cmd()
-            curl_cmd.extend(["--head", url + max(links) + "mac/"])
-            output = self.download_with_curl(curl_cmd)
-            if "200 OK" in output:
-                version = max(links).rstrip("/")
-                break
-            links.remove(max(links))
-            if not links:
-                raise ProcessorError("Did not find any valid versions to download.")
+        latest = APLooseVersion("0.0.0")
+        for link in links:
+            if link == "../":
+                continue
+            link = link.rstrip("/")
+            if latest < APLooseVersion(link):
+                latest = APLooseVersion(link)
+            
 
         # Obtain and return the dmg download URL and version
-        url += max(links) + "mac/"
+        url += str(latest) + "/mac/"
         page = self.download(url).decode('utf-8')
         links = re.findall(r'<a.*?\s*href="(.*?.dmg)".*?>', page)
         for link in links:
             if ".dmg" in link:
                 url += link
-        return url, version
+        return url, str(latest)
 
     def main(self):
         """Find and return a download URL"""
