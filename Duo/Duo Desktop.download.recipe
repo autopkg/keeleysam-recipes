@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>com.keeleysam.recipes.download.DuoDeviceHealth</string>
+	<string>com.keeleysam.recipes.download.DuoDesktop</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Duo Device Health</string>
+		<string>Duo Desktop</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -19,7 +19,7 @@
 				<key>url</key>
 				<string>https://duo.com/docs/checksums#macos</string>
 				<key>re_pattern</key>
-				<string>href="https://dl.duosecurity.com/DuoDeviceHealth-(\d\.\d\.\d\.\d)\.pkg"</string>
+				<string>href="https://dl.duosecurity.com/DuoDesktop-(\d\.\d\.\d\.\d)\.pkg"</string>
 				<key>result_output_var_name</key>
 				<string>version</string>
 			</dict>
@@ -30,7 +30,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://dl.duosecurity.com/DuoDeviceHealth-%version%.pkg</string>
+				<string>https://dl.duosecurity.com/DuoDesktop-%version%.pkg</string>
 			</dict>
 		</dict>
 		<dict>

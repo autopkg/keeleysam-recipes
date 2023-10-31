@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>com.keeleysam.recipes.munki.DuoDeviceHealth</string>
+	<string>com.keeleysam.recipes.munki.DuoDesktop</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Duo Device Health</string>
+		<string>Duo Desktop</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,7 +19,7 @@
 			<key>developer</key>
 			<string>Duo Security, Inc.</string>
 			<key>display_name</key>
-			<string>Duo Device Health</string>
+			<string>Duo Desktop</string>
 			<key>name</key>
 			<string>%NAME%</string>
             <key>preinstall_script</key>
@@ -40,7 +40,7 @@ fi</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.keeleysam.recipes.download.DuoDeviceHealth</string>
+	<string>com.keeleysam.recipes.download.DuoDesktop</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -54,7 +54,7 @@ fi</string>
 						<key>CFBundleShortVersionString</key>
 						<string>%version%</string>
 						<key>path</key>
-						<string>/Applications/Duo Device Health.app</string>
+						<string>/Applications/Duo Desktop.app</string>
 						<key>type</key>
 						<string>application</string>
 						<key>version_comparison_key</key>

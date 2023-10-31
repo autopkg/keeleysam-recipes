@@ -3,14 +3,14 @@
 <plist version="1.0">
 	<dict>
 		<key>Identifier</key>
-		<string>com.keeleysam.recipes.pkg.DuoDeviceHealth</string>
+		<string>com.keeleysam.recipes.pkg.DuoDesktop</string>
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
-			<string>Duo Device Health</string>
+			<string>Duo Desktop</string>
 		</dict>
 		<key>ParentRecipe</key>
-		<string>com.keeleysam.recipes.download.DuoDeviceHealth</string>
+		<string>com.keeleysam.recipes.download.DuoDesktop</string>
 		<key>Process</key>
 		<array>
 			<dict>
