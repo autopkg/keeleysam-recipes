@@ -3,28 +3,33 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Caffeine.</string>
+    <string>Downloads the latest version of Caffeine.
+
+For the OS_VERSION_DOWNLOAD variable please use:
+- "sonoma"
+- "ventura"
+- "monterey"</string>
     <key>Identifier</key>
     <string>com.github.keeleysam.recipes.Caffeine.download</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Caffeine</string>
+        <string>Caffeine-%OS_VERSION_DOWNLOAD%</string>
+        <key>OS_VERSION_DOWNLOAD</key>
+        <string>monterey</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>2.7</string>
     <key>Process</key>
     <array>
         <dict>
             <key>Arguments</key>
             <dict>
-                <key>github_repo</key>
-                <string>IntelliScape/caffeine</string>
+                <key>filename</key>
+                <string>%NAME%.zip</string>
+                <key>url</key>
+                <string>https://www.caffeine-app.net/download/%OS_VERSION_DOWNLOAD%/</string>
             </dict>
-            <key>Processor</key>
-            <string>GitHubReleasesInfoProvider</string>
-        </dict>
-        <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
         </dict>
@@ -35,10 +40,23 @@
         <dict>
             <key>Arguments</key>
             <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
                 <key>input_path</key>
-                <string>%pathname%/Caffeine.app</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/Caffeine.app</string>
                 <key>requirement</key>
-                <string>anchor apple generic and identifier "com.intelliscapesolutions.caffeine" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = YD6LEYT6WZ)</string>
+                <string>anchor apple generic and identifier "net.domzilla.caffeine" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "568T6RKXH7")</string>
             </dict>
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
