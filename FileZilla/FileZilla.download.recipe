@@ -24,6 +24,11 @@
 				<string>%RE_PATTERN%</string>
 				<key>url</key>
 				<string>https://filezilla-project.org/download.php?show_all=1</string>
+				<key>request_headers</key>
+				<dict>
+					<key>user-agent</key>
+					<string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15</string>
+				</dict>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
