@@ -9,7 +9,7 @@
 		<key>NAME</key>
 		<string>StuffItExpander</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://www.stuffit.com/update_rss/NEU/StuffItExpanderUpdates.xml</string>
+		<string>https://www.stuffit.com/update_rss/NEU/StuffItExpanderUpdates.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.1</string>
