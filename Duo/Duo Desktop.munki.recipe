@@ -31,9 +31,13 @@
 # Get darwin version, pinched, with &lt;33 from: https://stackoverflow.com/a/39499208
 # Arguably a cleaner way to detect OS.
 
+CREATEDEVICEHEALTHDIRECTORY="/Library/Application Support/Duo/Duo Device Health"
+DISABLECERT="/Library/Application Support/Duo/Duo Device Health/DisableMacOS11CertManagement"
+
 if [[ ${OSTYPE:6} -ge 21 ]]
 then
-    /usr/bin/touch "/Library/Application Support/Duo/Duo Device Health/DisableMacOS11CertManagement"
+	/bin/mkdir -p "$CREATEDEVICEHEALTHDIRECTORY"
+	/usr/bin/touch "$DISABLECERT"
 fi</string>
 			<key>unattended_install</key>
 			<true/>
