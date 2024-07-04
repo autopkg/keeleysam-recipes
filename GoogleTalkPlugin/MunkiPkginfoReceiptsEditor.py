@@ -3,7 +3,7 @@
 from __future__ import absolute_import
 
 from autopkglib import Processor, ProcessorError
-from plistlib import readPlist, writePlist
+from plistlib import load, dump
 
 __all__ = ["MunkiPkginfoReceiptsEditor"]
 
@@ -31,7 +31,8 @@ class MunkiPkginfoReceiptsEditor(Processor):
             self.output('empty pkginfo path')
             return
 
-        pkginfo = readPlist(self.env['pkginfo_repo_path'])
+        with open(self.env['pkginfo_repo_path'], 'rb') as f:
+            pkginfo = load(f)
 
         receipts_modified = []
         if 'receipts' in pkginfo.keys():
@@ -51,7 +52,8 @@ class MunkiPkginfoReceiptsEditor(Processor):
             self.output(
                 'Writing pkginfo to %s' %
                 self.env['pkginfo_repo_path'])
-            writePlist(pkginfo, self.env['pkginfo_repo_path'])
+            with open(self.env['pkginfo_repo_path'], 'wb') as f:
+                dump(pkginfo, f)
         else:
             self.output('No receipts modified, not writing pkginfo')
 
