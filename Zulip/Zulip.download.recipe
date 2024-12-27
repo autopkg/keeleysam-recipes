@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://zulip.com/dist/apps/mac/Zulip-latest.dmg</string>
+		<string>https://zulip.com/apps/download/mac</string>
 		<key>NAME</key>
 		<string>Zulip</string>
 	</dict>
