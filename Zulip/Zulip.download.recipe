@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://zulip.com/dist/apps/mac/Zulip-latest.dmg</string>
+		<string>https://zulip.com/apps/download/mac</string>
 		<key>NAME</key>
 		<string>Zulip</string>
 	</dict>
@@ -31,6 +31,17 @@
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/Zulip.app</string>
+				<key>requirement</key>
+				<string>identifier "org.zulip.zulip-electron" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "66KHCWMEYB"</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
 		</dict>
 	</array>
 </dict>
