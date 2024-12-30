@@ -3,18 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current version of FileZilla. Specify the channel via %NAME%.</string>
+	<string>Downloads the latest stable version of FileZilla for Mac.
+	
+Valid values for ARCH include:
+- "x86" (default, Intel)
+- "arm64" (Apple Silicon)
+Note the architecture values are not the same as the FileZilla nightly recipe.
+</string>
 	<key>Identifier</key>
 	<string>com.github.keeleysam.recipes.FileZilla.download</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>FileZilla</string>
+		<key>ARCH</key>
+		<string>x86</string>
 		<key>RE_PATTERN</key>
-		<string>&lt;a href=\"(?P&lt;url&gt;http[s]?.*?(?P&lt;filename&gt;FileZilla_(?P&lt;version&gt;[\d.]+)_macos-x86.*?\.tar\.bz2).*?)\"</string>
+		<string>&lt;a href=\"(?P&lt;url&gt;http[s]?.*?(?P&lt;filename&gt;FileZilla_(?P&lt;version&gt;[\d.]+)_macos-%ARCH%.*?\.tar\.bz2).*?)\"</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>1.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
