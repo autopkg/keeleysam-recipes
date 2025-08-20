@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>For the SUPPORTED_ARCH variable, use "x86_64" for Intel and use "arm64" for Apple Silicon.</string>
 	<key>Description</key>
 	<string>Downloads the current installation package for FileZilla. Imports it into Munki.</string>
 	<key>Identifier</key>
@@ -22,9 +24,15 @@
 			<string>FileZilla</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>%SUPPORTED_ARCH%</string>
+			</array>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
+		<key>SUPPORTED_ARCH</key>
+		<string>x86_64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.1</string>
@@ -58,7 +66,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%SUPPORTED_ARCH%.dmg</string>
 				<key>dmg_root</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
