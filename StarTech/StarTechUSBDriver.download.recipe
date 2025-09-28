@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://sgcdn.startech.com/005329/media/sets/ax88179_Mac_Drivers/[ASIX88179]%20Mac%20USB%20Network%20Adapter.zip</string>
+		<string>https://sgcdn.startech.com/005329/media/sets/ax88179_Mac_Drivers/\[ASIX88179\]%20Mac%20USB%20Network%20Adapter.zip</string>
 		<key>NAME</key>
 		<string>StarTechUSBDriver</string>
         <key>FILENAME</key>
