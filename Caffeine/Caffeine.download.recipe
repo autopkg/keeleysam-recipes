@@ -6,6 +6,8 @@
     <string>Downloads the latest version of Caffeine.
 
 For the OS_VERSION_DOWNLOAD variable please use:
+- "tahoe"
+- "sequoia"
 - "sonoma"
 - "ventura"
 - "monterey"</string>
@@ -13,10 +15,10 @@ For the OS_VERSION_DOWNLOAD variable please use:
     <string>com.github.keeleysam.recipes.Caffeine.download</string>
     <key>Input</key>
     <dict>
+        <key>OS_VERSION_DOWNLOAD</key>
+        <string>tahoe</string>
         <key>NAME</key>
         <string>Caffeine-%OS_VERSION_DOWNLOAD%</string>
-        <key>OS_VERSION_DOWNLOAD</key>
-        <string>monterey</string>
     </dict>
     <key>MinimumVersion</key>
     <string>2.7</string>
