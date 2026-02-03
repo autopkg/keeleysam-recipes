@@ -29,7 +29,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.keeleysam.recipes.FileZilla.download</string>
+	<string>com.github.keeleysam.recipes.FileZilla.nightly.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
