@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Chicken</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>http://chicken.sourceforge.net/chicken.xml</string>
+		<string>https://chicken.sourceforge.net/chicken.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
