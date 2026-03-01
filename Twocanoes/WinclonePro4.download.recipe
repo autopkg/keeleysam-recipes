@@ -16,9 +16,13 @@
 		<string>Winclone Pro/4.1 Sparkle/313</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.1</string>
+	<string>1.1</string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Processor</key>
+			<string>DeprecationWarning</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
