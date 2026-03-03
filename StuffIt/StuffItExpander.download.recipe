@@ -12,9 +12,18 @@
 		<string>https://www.stuffit.com/update_rss/NEU/StuffItExpanderUpdates.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.1</string>
+	<string>1.1</string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Processor</key>
+			<string>DeprecationWarning</string>
+			<key>Arguments</key>
+			<dict>
+				<key>warning_message</key>
+				<string>StuffIt Expander is now only available on the Mac App Store (details: https://stuffit.com/#downloads). This recipe is deprecated and will be removed in the future.</string>
+			</dict>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
