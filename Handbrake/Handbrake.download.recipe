@@ -6,6 +6,8 @@
 	<string>Downloads the current release version of HandBrake.</string>
 	<key>Identifier</key>
 	<string>com.github.keeleysam.autopkg.download.HandBrake</string>
+	<key>MinimumVersion</key>
+	<string>1.1</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -15,6 +17,15 @@
 	</dict>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>warning_message</key>
+				<string>This recipe has been deprecated. Please use com.github.autopkg.download.Handbrake from the recipes repo instead, which has code signature verification and uses GitHub Releases instead of a Sparkle feed.</string>
+			</dict>
+			<key>Processor</key>
+			<string>DeprecationWarning</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
