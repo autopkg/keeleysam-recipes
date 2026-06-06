@@ -19,7 +19,6 @@
 from __future__ import absolute_import
 
 import xml.dom.minidom
-from distutils.version import LooseVersion
 
 from autopkglib import Processor, ProcessorError, URLGetter
 
